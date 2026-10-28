@@ -1,0 +1,18 @@
+# Presentaciones generadas (se reconstruyen desde el spec). El template sí se versiona.
+*.pptx
+!skills/dt-custom-pptx-services-format-jromero/assets/template-dt-services.pptx
+render/
+out/
+~$*.pptx
+
+# Python
+__pycache__/
+*.pyc
+
+# draw.io: respaldos temporales
+*.bkp
+.$*
+
+# Sistema
+.DS_Store
+Thumbs.db

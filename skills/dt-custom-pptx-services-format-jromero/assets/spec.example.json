@@ -1,0 +1,41 @@
+{
+  "output": "ejemplo.pptx",
+  "slides": [
+    {
+      "pattern": "cover",
+      "text": {
+        "[Presentation title]": "Plan de adopción de Dynatrace",
+        "[Subtitle: what the audience will get]": "Propuesta de servicios para el próximo trimestre"
+      },
+      "notes": "Objetivo: acordar el alcance y el inicio del servicio."
+    },
+    {
+      "pattern": "key-messages",
+      "text": {
+        "[The bottom line]": "En resumen",
+        "[Key message 1]": "En 12 semanas, cada equipo crítico tiene alertas útiles y tableros propios.",
+        "[Key message 2]": "El trabajo se hace con sus equipos, para que el conocimiento se quede en casa.",
+        "[Key message 3]": "Para empezar necesitamos un responsable por equipo y acceso de lectura."
+      },
+      "notes": "Los tres mensajes que el público debe recordar."
+    },
+    {
+      "pattern": "roadmap",
+      "text": {
+        "[Slide title: the takeaway in one sentence]": "Próximo paso: arrancar con los equipos de pagos",
+        "[Step 1 name]": "Acordar", "[Step 1 description]": "Alcance, responsables y fechas de revisión.",
+        "[Step 2 name]": "Diagnosticar", "[Step 2 description]": "Cobertura y alertas de los servicios de pagos.",
+        "[Step 3 name]": "Corregir", "[Step 3 description]": "Ajustes con cada equipo, con evidencia.",
+        "[Step 4 name]": "Escalar", "[Step 4 description]": "El mismo método en los siguientes equipos.",
+        "[ASK LABEL]": "LO QUE NECESITAMOS",
+        "[The ask: what you need from the audience]": "Un responsable por equipo y la aprobación para iniciar el lunes."
+      },
+      "notes": "Cerrar con el pedido concreto."
+    },
+    {
+      "pattern": "closing",
+      "text": {"Thank You": "Gracias"},
+      "notes": "Preguntas."
+    }
+  ]
+}

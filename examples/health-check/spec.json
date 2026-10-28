@@ -1,0 +1,162 @@
+{
+  "output": "health-check.pptx",
+  "slides": [
+    {
+      "pattern": "cover",
+      "text": {
+        "[Presentation title]": "Observability health check",
+        "[Subtitle: what the audience will get]": "Findings and a 12-week plan (fictional example)"
+      },
+      "notes": "Goal: share what four weeks of assessment found, and agree on a 12-week plan. All names and figures in this deck are fictional."
+    },
+    {
+      "pattern": "agenda",
+      "text": {
+        "[Agenda item 1]": "The bottom line",
+        "[Agenda item 2]": "What we found",
+        "[Agenda item 3]": "How we work",
+        "[Agenda item 4]": "Plan and next steps"
+      },
+      "notes": "Four blocks, about 25 minutes, then questions."
+    },
+    {
+      "pattern": "key-messages",
+      "text": {
+        "[The bottom line]": "The bottom line",
+        "[Key message 1]": "Alert noise, not missing coverage, is what hides real incidents.",
+        "[Key message 2]": "Fixing five noisy sources removes most of that noise in six weeks.",
+        "[Key message 3]": "The plan needs one owner per team and read-only access to start."
+      },
+      "notes": "If the audience remembers only one slide, it is this one."
+    },
+    {
+      "pattern": "from-to",
+      "text": {
+        "[Slide title: the takeaway in one sentence]": "What teams feel is rarely what the data shows",
+        "[LEFT COLUMN LABEL]": "WHAT TEAMS TOLD US",
+        "[RIGHT COLUMN LABEL]": "WHAT THE DATA SHOWED",
+        "[CONTEXT 1]": "OPERATIONS", "[What they said 1]": "We get far too many alerts",
+        "[What we found 1]": "62% of problems come from five noisy sources",
+        "[CONTEXT 2]": "DEVELOPMENT", "[What they said 2]": "We can't see the impact of our releases",
+        "[What we found 2]": "No deployment events reach Dynatrace",
+        "[CONTEXT 3]": "BUSINESS", "[What they said 3]": "Customers tell us about outages first",
+        "[What we found 3]": "Checkout has no synthetic monitor",
+        "[CONTEXT 4]": "PLATFORM", "[What they said 4]": "Kubernetes is a black box",
+        "[What we found 4]": "Only 3 of 8 clusters send Kubernetes events",
+        "[Takeaway banner: the one idea to remember]": "Most blind spots are configuration, not missing licenses."
+      },
+      "notes": "Interviews with four teams, contrasted with what the environment shows. Every finding has a query behind it."
+    },
+    {
+      "pattern": "diagram-banner",
+      "text": {
+        "[Slide title: the takeaway in one sentence]": "A six-step health check, from discovery to handover",
+        "[Banner lead-in]": "Same method for every team",
+        "[Banner message]": "every finding has evidence, an owner and a date."
+      },
+      "images": {"diagram": "diagrams/health-check-journey.png"},
+      "notes": "Steps 1-3 happened in the first four weeks. Steps 4-6 are the plan we propose today."
+    },
+    {
+      "pattern": "cards-steps",
+      "text": {
+        "[Slide title: the takeaway in one sentence]": "Every finding ends in an owned action",
+        "[TOP SECTION LABEL]": "WHAT THE REPORT COVERS",
+        "[Card 1 title]": "Coverage", "[Card 1 text]": "What is monitored, and what is not",
+        "[Card 2 title]": "Alerting", "[Card 2 text]": "Noise, gaps and who gets notified",
+        "[Card 3 title]": "Adoption", "[Card 3 text]": "Who uses Dynatrace, and for what",
+        "[Card 4 title]": "Cost", "[Card 4 text]": "Ingest volume that nobody queries",
+        "[BOTTOM SECTION LABEL]": "FOUR TYPES OF ACTION",
+        "[Step 1]": "Contain", "[Step 1 meaning]": "Stop the damage today",
+        "[Step 2]": "Correct", "[Step 2 meaning]": "Remove the cause",
+        "[Step 3]": "Prevent", "[Step 3 meaning]": "Keep it from coming back",
+        "[Step 4]": "Detect", "[Step 4 meaning]": "Warn earlier next time",
+        "[Banner start]": "Every action has",
+        "[highlighted phrase]": "an owner and a date",
+        "[banner end]": "— and we review progress every two weeks."
+      },
+      "notes": "The report has four chapters; each finding becomes one of four action types."
+    },
+    {
+      "pattern": "kpis",
+      "text": {
+        "[Slide title: the takeaway in one sentence]": "Four numbers show where the quick wins are",
+        "[KPI 1]": "62%", "[KPI 1 meaning]": "of problems come from five noisy sources", "[KPI 1 SOURCE]": "ALERTING",
+        "[KPI 2]": "3 of 8", "[KPI 2 meaning]": "clusters send Kubernetes events", "[KPI 2 SOURCE]": "COVERAGE",
+        "[KPI 3]": "0", "[KPI 3 meaning]": "synthetic checks on checkout", "[KPI 3 SOURCE]": "BUSINESS",
+        "[KPI 4]": "18%", "[KPI 4 meaning]": "of log ingest is never queried", "[KPI 4 SOURCE]": "COST",
+        "[Benefit 1 title]": "For operations", "[Benefit 1 text]": "Fewer alerts, and every one of them matters.",
+        "[Benefit 2 title]": "For development", "[Benefit 2 text]": "Each release visible next to its impact.",
+        "[Benefit 3 title]": "For the business", "[Benefit 3 text]": "Outages detected before customers call."
+      },
+      "notes": "All four numbers come from queries run on the environment during the assessment (fictional values in this example)."
+    },
+    {
+      "pattern": "case",
+      "text": {
+        "[Slide title: the takeaway in one sentence]": "Checkout: customers noticed the outage first",
+        "[QUOTE LABEL]": "CUSTOMER SAID",
+        "[What the customer said, in their words]": "We found out from social media",
+        "[KPI COLUMN LABEL]": "BUSINESS IMPACT", "[DIAGRAM LABEL]": "ROOT CAUSE", "[ACTIONS LABEL]": "WHAT WE FIX",
+        "[KPI 1]": "40 min", "[KPI 1 meaning]": "before the first alert",
+        "[KPI 2]": "1,200", "[KPI 2 meaning]": "failed orders",
+        "[KPI 3]": "0", "[KPI 3 meaning]": "synthetic checks on checkout",
+        "[Tag 1]": "Correct", "[Action 1]": "Add a timeout to the payment call",
+        "[Tag 2]": "Prevent", "[Action 2]": "Load test every provider change",
+        "[Tag 3]": "Detect", "[Action 3]": "Synthetic check on checkout",
+        "[Callout: the lesson in one sentence]": "A five-minute synthetic check would have caught it first."
+      },
+      "images": {"diagram": "diagrams/checkout-chain.png"},
+      "notes": "One incident from the assessment period, told end to end."
+    },
+    {
+      "pattern": "phases-plan",
+      "text": {
+        "[Slide title: the takeaway in one sentence]": "A 12-week plan in four phases",
+        "[Phase 1]": "Discover", "[Phase 2]": "Quick wins", "[Phase 3]": "Hardening", "[Phase 4]": "Handover",
+        "[Duration A]": "6 weeks", "[Duration B]": "6 weeks",
+        "[Phase 1 activity 1]": "Team interviews", "[Phase 1 activity 2]": "Environment scan",
+        "[Phase 2 activity 1]": "Fix noisy sources", "[Phase 2 activity 2]": "Release events",
+        "[Phase 2 activity 2 detail]": "From the CI/CD pipeline",
+        "[Workstream 1]": "Alerting", "[Workstream 1 detail]": "Tune, route and test alerts",
+        "[Workstream 2]": "Coverage", "[Workstream 2 detail]": "Kubernetes events and synthetic checks",
+        "[Workstream 3]": "Adoption", "[Workstream 3 detail]": "Dashboards per team",
+        "[Workstream 4]": "Cost", "[Workstream 4 detail]": "Retention and ingest rules",
+        "[Role 1]": "Consultant", "[Role 2]": "Architect / PM", "[Role 3]": "PM", "[Role 4]": "Team SME",
+        "[Owner 1]": "Dynatrace", "[Owner 2]": "Dynatrace", "[Owner 3]": "Customer",
+        "[Start]": "Kickoff", "[Milestone]": "Week 4", "[End]": "Week 12"
+      },
+      "notes": "Phases overlap on purpose: quick wins start while the discovery closes."
+    },
+    {
+      "pattern": "risks-prereqs",
+      "text": {
+        "[Slide title: the takeaway in one sentence]": "What could slow us down, and what we need to start",
+        "[Left list title]": "Risks",
+        "[Risk 1]": "Teams without time to review findings",
+        "[Risk 2]": "Changes frozen during peak season",
+        "[Right list title]": "Prerequisites",
+        "[Prerequisite 1]": "One owner per team",
+        "[Prerequisite 2]": ["Read-only access to every environment", "A bi-weekly review slot"]
+      },
+      "notes": "The second prerequisite list shows how one placeholder expands into several items."
+    },
+    {
+      "pattern": "roadmap",
+      "text": {
+        "[Slide title: the takeaway in one sentence]": "Next step: start with the five noisiest sources",
+        "[Step 1 name]": "Agree", "[Step 1 description]": "Confirm owners and the review cadence.",
+        "[Step 2 name]": "Fix", "[Step 2 description]": "Tune the five noisiest sources with each team.",
+        "[Step 3 name]": "Measure", "[Step 3 description]": "Compare alert volume and detection time.",
+        "[Step 4 name]": "Scale", "[Step 4 description]": "Apply the same playbook to the next teams.",
+        "[ASK LABEL]": "OUR ASK",
+        "[The ask: what you need from the audience]": "One owner per team, and a go-ahead for phase two."
+      },
+      "notes": "Close with the ask: names of owners and a decision on phase two."
+    },
+    {
+      "pattern": "closing",
+      "notes": "Questions."
+    }
+  ]
+}
